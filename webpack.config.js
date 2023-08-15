@@ -10,7 +10,7 @@ module.exports = {
   
     mode: mode,
     output:{
-      assetModuleFilename: 'images/[hash][ext][query]',
+      assetModuleFilename: 'img/[hash][ext][query]',
       clean: true,
     },
     plugins: [
@@ -28,7 +28,7 @@ module.exports = {
         },
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
-          type: 'asset/resource',
+          type: 'asset/inline',
         },
         {
           test: /\.(le|c)ss$/i,
