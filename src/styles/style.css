@@ -42,6 +42,7 @@ body{
   font-family: 'Oswald', sans-serif; 
   font-weight: 500;
   font-size: 21px;
+  letter-spacing: 0.02em;
 }
 .text-p{
   font-family: 'Open Sans', sans-serif;
@@ -106,7 +107,6 @@ font-family: 'Oswald', sans-serif; */
   margin-bottom: 0;
 }
 .h1 {
-  /* font-family: 'Open Sans', sans-serif; */
   font-weight: 500;
   font-size: 62px;
   line-height: 95px;
@@ -117,6 +117,12 @@ font-family: 'Oswald', sans-serif; */
   max-width: 900px;
   margin: 0 auto 17px;
   color: var(--white-color);
+}
+@media screen and (max-width: 380px){
+  .h1{
+    font-size: 46px;
+    line-height: 64px;
+  }
 }
 .h4 {
   margin: 0 auto;
@@ -191,6 +197,7 @@ font-family: 'Oswald', sans-serif; */
 @media screen and (max-width: 768px) {
   .info{
     position: relative;
+    padding: 30px 0;
   }
   .about__grid {
     grid-template-columns: repeat(1, 1fr);
@@ -261,7 +268,7 @@ font-family: 'Oswald', sans-serif; */
 .request {
   background-color: var(--accent-color);
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 35px;
 }
 .request__flex {
   display: flex;
@@ -315,3 +322,262 @@ font-family: 'Oswald', sans-serif; */
     flex-wrap: wrap;
   }
 }
+
+.services {
+  padding: 150px 0;
+}
+.section__h2, .services__h4 {
+  color: #000;
+  text-align: center;
+}
+.section__h2{
+  margin-bottom: 55px;
+}
+.services__h4{
+  margin: 0 auto;
+  max-width: 172px;
+  text-transform: uppercase;
+}
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+.services__grid-item {
+  padding: 57px 0;
+  background: #f7f7f7;
+  width: 350px;
+}
+.services__icon {
+  margin: 0 auto 25px;
+}
+
+@media screen and (max-width: 1280px) {
+  .services {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .services__grid-item{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 0;
+}
+
+@media screen and (max-width: 1280px) {
+  .portfolio__grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio__grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.question {
+  padding-top: 150px;
+  padding-bottom: 110px;
+}
+
+.question .section__h2 {
+  margin-bottom: 50px;
+}
+
+.question_h3 {
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 21px;
+}
+.question_p {
+  margin-bottom: 40px;
+  color: var(--grey-color);
+  max-width: 730px;
+}
+.question_h3.close{
+  margin-bottom: 33px;
+}
+.question_h3.open::before, 
+.question_h3.close::before{
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/Треугольник.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 15px;
+}
+.question_h3.open::before{
+  transform: rotate(-90deg);
+}
+.question_h3.close + .question_p{
+  display: none;
+}
+
+@media screen and (max-width: 1280px) {
+  .question{
+    padding: 150px 15px 110px;
+  }
+  }
+
+  .partners {
+    padding-top: 100px;
+    padding-bottom: 85px;
+    background-color: var(--darc-color);
+  }
+  .partners__h2 {
+    color: var(--white-color);
+    text-align: center;
+    margin-bottom: 47px;
+  }
+  .partners__flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .partners__item {
+    margin-right: 40px;
+    margin-bottom: 20px;
+    max-width: 170px;
+  }
+  .partners__item:nth-child(5n){
+    margin-right: 0;
+  }
+  @media screen and (max-width: 1280px) {
+    .partners__flex{
+      justify-content: center;
+    }
+    .partners__item{
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+    .partners__item:nth-child(5n){
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+  }
+
+  .reviews {
+    padding: 150px 0;
+  }
+  .reviews__h2 {
+    margin-bottom: 55px;
+    text-align: center;
+
+  }
+  .reviews__grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .reviews__card {
+    background-color: #f7f7f7;
+    padding: 30px;
+    margin-bottom: 30px;
+  }
+  .reviews__quoters {
+    font-size: 96px;
+    color: var(--accent-color);
+    line-height: 1;
+    margin-bottom: -40px;
+  }
+  .reviews__author-accent {
+    color: var(--accent-color);
+    letter-spacing: 0.02em;
+  }
+  
+  @media screen and (max-width: 1280px) {
+    .reviews {
+      padding: 100px 15px;
+    }
+    .reviews__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .reviews__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .contacts {
+    padding: 100px 0 150px;
+  }
+  .contacts__h2 {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  .contacts__grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .contacts__grid-item {
+    max-width: 250px;
+    text-align: center;
+  }
+  .contacts__img {
+    margin: 0 auto 13px;
+  }
+  .contacts__h3 {
+    text-transform: uppercase;
+  }
+  .contacts__h3-gray {
+    color: var(--grey-color);
+    margin-bottom: 20px;
+  }
+  .contacts__h3-accent {
+    color: var(--accent-color);
+  }
+  @media screen and (max-width: 1280px) {
+    .contacts__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .contacts__grid-item {
+      max-width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .contacts__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .footer {
+    padding: 30px 0;
+    background-color: var(--darc-color);
+    color: var(--white-color);
+  }
+  .footer__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+  @media screen and (max-width: 1280px) {
+    .footer {
+      padding: 30px 15px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .footer__flex {
+      flex-direction: column;
+    }
+  }
+
